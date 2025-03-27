@@ -1,0 +1,56 @@
+{
+  "name": "@avenauche/loan-calculator",
+  "version": "1.0.0",
+  "description": "A simple loan payment calculator",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "exports": {
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.cjs"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "lint": "eslint .",
+    "prepare": "husky install"
+  },
+  "keywords": [
+    "loan",
+    "calculator",
+    "finance",
+    "mortgage"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avenauche/loan-calculator.git"
+  },
+  "bugs": {
+    "type": "git",
+    "url": "https://github.com/avenauche/loan-calculator/issues"
+  },
+  "homepage": "https://github.com/avenauche/loan-calculator",
+  "author": "avenauche",
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
+    "@eslint/js": "^9.23.0",
+    "eslint": "^8.57.1",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.31.0",
+    "globals": "^16.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.0",
+    "unbuild": "^3.5.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
