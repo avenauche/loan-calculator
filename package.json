@@ -13,6 +13,9 @@
   ],
   "scripts": {
     "build": "unbuild",
+    "test": "npm run test:cjs && npm run test:es6",
+    "test:cjs": "node tests/cjs.test.js",
+    "test:es6": "node tests/esm.test.mjs",
     "lint": "eslint .",
     "prepare": "husky install"
   },

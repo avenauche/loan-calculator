@@ -10,6 +10,11 @@ class LoanCalculator {
     this.annualRate = annualRate;
     this.termInYears = termInYears;
 
+    // Handle zero interest rate case
+    if (annualRate === 0) {
+      return Number((principal / (termInYears * 12)).toFixed(2));
+    }
+
     const monthlyRate = this.annualRate / 12 / 100;
     const numberOfPayments = this.termInYears * 12;
 
