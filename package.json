@@ -13,11 +13,14 @@
   ],
   "scripts": {
     "build": "unbuild",
+    "dev": "unbuild --stub",
+    "prepare": "husky",
+    "prepublishOnly": "npm run build",
     "test": "npm run test:cjs && npm run test:es6",
     "test:cjs": "node tests/cjs.test.js",
     "test:es6": "node tests/esm.test.mjs",
-    "lint": "eslint .",
-    "prepare": "husky install"
+    "lint-staged": "lint-staged",
+    "lint": "eslint ."
   },
   "keywords": [
     "loan",
@@ -55,5 +58,8 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "resolutions": {
+    "eslint": "^8.2.0"
   }
 }
